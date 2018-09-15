@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "e4ccdbe0-3afe-4ee5-bdf4-572af65c8471",
+		"name": "Atividade",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://www.omdbapi.com/?i=tt3498820&apikey=84edf5c2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "52f109c5-f729-457b-bdbd-8ae9266c4263",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"\");",
+							"});",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"JSON body check\", function () {",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"verify if title() is Captain America: Civil War\"] = jsonData.Title === \"Captain America: Civil War\";",
+							"tests[\"verify the IMDB ID tt3498820\"] = jsonData.imdbID === \"tt3498820\";",
+							"tests[\"verify if released() is 06 May 2016\"] = jsonData.Released === \"06 May 2016\";",
+							"tests[\"verify if genre() is Action, Adventure, Sci-Fi\"] = jsonData.Genre === \"Action, Adventure, Sci-Fi\";",
+							"tests[\"verify if director() is Anthony Russo, Joe Russo\"] = jsonData.Director === \"Anthony Russo, Joe Russo\";",
+							"tests[\"verify if year() is 2016\"] = jsonData.Year === \"2016\";",
+							"tests[\"verify if english, German, Xhosa, Russian, Romanian, Hindi\"] = jsonData.Language === \"English, German, Xhosa, Russian, Romanian, Hindi\";",
+							"tests[\"verify if country() is USA, Germany\"] = jsonData.Country === \"USA, Germany\";",
+							"tests[\"verify if website() is http://marvel.com/captainamerica#/home\"] = jsonData.Website === \"http://marvel.com/captainamerica#/home\";",
+							"tests[\"verify if type() is movie\"] = jsonData.Type === \"movie\";",
+							"tests[\"verify if production() is Walt Disney Pictures \"] = jsonData.Production === \"Walt Disney Pictures\";",
+							"",
+							"",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://www.omdbapi.com/?i=tt3498820&apikey=84edf5c2",
+					"protocol": "http",
+					"host": [
+						"www",
+						"omdbapi",
+						"com"
+					],
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "i",
+							"value": "tt3498820"
+						},
+						{
+							"key": "apikey",
+							"value": "84edf5c2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://www.omdbapi.com/?i=tt3107288&apikey=84edf5c2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "99685f83-948e-4941-8f66-23a46d88a529",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"\");",
+							"});",
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"JSON body check\", function () {",
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"verify if title() is The Flash\"] = jsonData.Title === \"The Flash\";",
+							"tests[\"verify the IMDB ID tt3107288\"] = jsonData.imdbID === \"tt3107288\";",
+							"tests[\"verify if released() is 07 Oct 2014\"] = jsonData.Released === \"07 Oct 2014\";",
+							"tests[\"verify if genre() is Action, Adventure, Drama\"] = jsonData.Genre === \"Action, Adventure, Drama\";",
+							"tests[\"verify if director() is N/A\"] = jsonData.Director === \"N/A\";",
+							"tests[\"verify if year() is 2014–\"] = jsonData.Year === \"2014–\";",
+							"tests[\"verify if English\"] = jsonData.Language === \"English\";",
+							"tests[\"verify if country() is USA\"] = jsonData.Country === \"USA\";",
+							"tests[\"verify if totalSeasons() is 4\"] = jsonData.totalSeasons === \"4\";",
+							"tests[\"verify if type() is series\"] = jsonData.Type === \"series\";",
+							"tests[\"verify if response() True\"] = jsonData.Response === \"True\";",
+							"",
+							"",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://www.omdbapi.com/?i=tt3107288&apikey=84edf5c2",
+					"protocol": "http",
+					"host": [
+						"www",
+						"omdbapi",
+						"com"
+					],
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "i",
+							"value": "tt3107288"
+						},
+						{
+							"key": "apikey",
+							"value": "84edf5c2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
